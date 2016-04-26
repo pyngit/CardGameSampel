@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CardGameSampel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKZ-4S-age">
+                                <rect key="frame" x="277" y="544" width="47" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Draw"/>
+                                <connections>
+                                    <action selector="drawCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UQr-UN-OTp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0a0-hD-bZk">
+                                <rect key="frame" x="492" y="544" width="38" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pqZ-L3-DqK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bq7-SL-Po9">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Delete"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="272" y="35" width="58" height="36"/>
+                                </variation>
+                                <connections>
+                                    <action selector="deleteCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOS-hu-Q8P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hKZ-4S-age" secondAttribute="bottom" constant="20" id="3UI-rQ-seJ"/>
+                            <constraint firstItem="Bq7-SL-Po9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="7YC-PW-f68"/>
+                            <constraint firstItem="hKZ-4S-age" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HWO-Sa-SMp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0a0-hD-bZk" secondAttribute="bottom" constant="20" id="fhu-q4-p6o"/>
+                            <constraint firstItem="Bq7-SL-Po9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ttl-1K-a92"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0a0-hD-bZk" secondAttribute="trailing" constant="50" id="yCV-yX-0ZD"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Bq7-SL-Po9"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="7YC-PW-f68"/>
+                                <exclude reference="ttl-1K-a92"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="Bq7-SL-Po9"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="7YC-PW-f68"/>
+                                <include reference="ttl-1K-a92"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
